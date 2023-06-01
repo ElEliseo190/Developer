@@ -1,11 +1,10 @@
-// Definir las noticias y la versión del proyecto
-const noticias = [
+
+const noticias = [ //Aqui se pone la noticia
   "Test 1 Nok..."
 ];
 
 const version = "1.0.0";
 
-// Función para mostrar las noticias y la versión en la consola
 function mostrarInformacion() {
   console.log("=== TheNokStore ===");
   console.log("Versión: " + version);
@@ -16,5 +15,8 @@ function mostrarInformacion() {
   }
 }
 
-// Llamar a la función para mostrar la información en la consola
-mostrarInformacion();
+setInterval(mostrarInformacion, 5000); //tiempo de ejecuion cada 5m 
+function mostrarNotificacion() {//sistema de notificaciones
+  console.log("¡Recuerda visitar TheNokStore para conocer las últimas novedades!");
+}
+setInterval(mostrarNotificacion, 10000);

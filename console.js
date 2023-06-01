@@ -1,22 +1,25 @@
-
-const noticias = [ //Aqui se pone la noticia
+// Definir las noticias y la versión del proyecto
+const noticias = [
   "Test 1 Nok..."
 ];
 
 const version = "1.0.0";
 
-function mostrarInformacion() {
-  console.log("=== TheNokStore ===");
-  console.log("Versión: " + version);
-  console.log("Noticias:");
+// Función para generar el código con la información del proyecto y las noticias
+function generarCodigo() {
+  let codigo = "=== TheNokStore ===\n";
+  codigo += "Versión: " + version + "\n";
+  codigo += "Noticias:\n";
 
   for (let i = 0; i < noticias.length; i++) {
-    console.log("- " + noticias[i]);
+    codigo += "- " + noticias[i] + "\n";
   }
+
+  return codigo;
 }
 
-setInterval(mostrarInformacion, 5000); //tiempo de ejecuion cada 5m 
-function mostrarNotificacion() {//sistema de notificaciones
-  console.log("¡Recuerda visitar TheNokStore para conocer las últimas novedades!");
-}
-setInterval(mostrarNotificacion, 10000);
+// Llamar a la función para obtener el código
+const codigo = generarCodigo();
+
+// Imprimir el código en la consola
+console.log(codigo);
